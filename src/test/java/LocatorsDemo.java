@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 
 public class LocatorsDemo {
 
@@ -31,6 +33,18 @@ public class LocatorsDemo {
 
         ((JavascriptExecutor) chrome)
                 .executeScript("arguments[0].click();", link);
+
+        List<WebElement> linkElements = chrome.findElements(By.className("nav-promo-sub"));
+
+        System.out.println(linkElements.size());
+
+        int a = chrome.findElements(By.tagName("a")).size();
+
+        System.out.println("Tag Links size ::: "+a);
+
+        int toatalNumImgs = chrome.findElements(By.tagName("img")).size();
+
+        System.out.println("Tag Links size ::: "+toatalNumImgs);
 
         //chrome.findElement(By.cssSelector(".cpm-header_icon.search.picto-search")).click();
 
