@@ -7,3 +7,5 @@ Simo main m3
 Simo main m4
 
 Simo main m5
+
+Simo main m6
